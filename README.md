@@ -10,6 +10,7 @@ install到本地库后引入依赖
     <version>1.0.0</version>
 </dependency>
 ```
+
 2.配置redis连接和session超时时间
 ```
 #redis服务器地址
@@ -29,27 +30,32 @@ redis-session.expire=24
 #session超时时间类型：DAYS:天 HOURS:小时 MINUTES:分 SECONDS:秒
 redis-session.expireType=HOURS
 ```
+
 3.程序中引入redisSession
 ```java
 @Autowired
 private RedisSession redisSession;
 ```
-5.设置session
+
+4.设置session
 ```java
 redisSession.set(response, map);
 ```
 入参为HttpServletResponse和存储session信息的map。
-6.获取session信息
+
+5.获取session信息
 ```java
 String message = redisSession.get(request, key)
 ```
 入参为HttpServletRequest和session中对应的key。
-7.检查session是否存在
+
+6.检查session是否存在
 ```java
 redisSession.checkSession(request)
 ```
 入参为HttpServletRequest，返回true则session存在，返回false则session不存在。
-8.移除session
+
+7.移除session
 ```java
 redisSession.removeSession(request, response);
 ```
