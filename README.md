@@ -2,8 +2,8 @@
 redisSession是一个使用redis存储session数据的简易springboot-starter。
 # 如何使用
 1.引入依赖
-```xml
 install到本地库后引入依赖
+```xml
 <dependency>
     <groupId>com.xiaobai</groupId>
     <artifactId>redis-session-springboot-starter</artifactId>
