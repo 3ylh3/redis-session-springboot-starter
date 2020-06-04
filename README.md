@@ -60,5 +60,7 @@ redisSession.checkSession(request)
 redisSession.removeSession(request, response);
 ```
 入参为HttpServletRequest和HttpServletResponse。
+# 日志
+日志文件在项目根目录的redis-session文件夹下
 # 下载
 https://github.com/3ylh3/redis-session-springboot-starter/releases
