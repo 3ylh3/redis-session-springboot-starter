@@ -23,7 +23,7 @@ public class RedisSessionAutoConfigure {
 
     @Bean
     @ConditionalOnMissingBean
-    public RedisSession init() {
+    public RedisSession initRedisSession() {
         return new RedisSessionImpl(properties.getExpireType(), properties.getExpire());
     }
 }
